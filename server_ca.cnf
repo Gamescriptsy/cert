@@ -1,0 +1,16 @@
+
+[ req ]
+distinguished_name = req_distinguished_name
+x509_extensions = v3_ca
+prompt = no
+
+[ req_distinguished_name ]
+CN = Server CA
+O = KelasRKS
+
+[ v3_ca ]
+keyUsage = critical, keyCertSign, cRLSign
+basicConstraints = critical, CA:true
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid:always,issuer:always
+
